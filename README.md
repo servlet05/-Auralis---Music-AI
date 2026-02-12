@@ -28,3 +28,26 @@ Auralis es una plataforma web para descubrir, compartir y distribuir música gen
 ```bash
 git clone https://github.com/servlet05/-Auralis---Music-AI.git
 cd auralis
+```
+```
+python -m venv venv
+source venv/bin/activate  # Linux/Mac
+# o
+venv\Scripts\activate  # Windows
+```
+```
+pip install -r requirements.txt
+```
+```
+cp .env.example .env
+# Edita .env con tu configuración
+```
+```
+flask shell
+>>> from auralis import db
+>>> db.create_all()
+>>> exit()
+```
+```
+python run.py
+```
