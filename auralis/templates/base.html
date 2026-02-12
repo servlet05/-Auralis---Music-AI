@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{% block title %}Auralis{% endblock %} - Música con IA</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+    <meta name="description" content="Auralis - Descubre música única generada por inteligencia artificial. Artistas emergentes, sonidos del futuro.">
+    <meta name="keywords" content="IA, música, inteligencia artificial, generativa, creative commons">
+</head>
+<body>
+    <header class="main-header">
+        <div class="container">
+            <div class="logo">
+                <a href="{{ url_for('main.index') }}">auralis</a>
+            </div>
+            <div class="tagline">
+                Open your ears to AI-generated music
+            </div>
+            
+            <nav class="main-nav">
+                <ul class="nav-list">
+                    <li><a href="{{ url_for('main.index') }}" class="nav-link">Home</a></li>
+                    <li><a href="{{ url_for('main.explore') }}" class="nav-link">Discover</a></li>
+                    <li><a href="{{ url_for('artists.list_all') }}" class="nav-link">Artists</a></li>
+                    <li><a href="{{ url_for('main.about') }}" class="nav-link">About</a></li>
+                    <li><a href="{{ url_for('artists.upload') }}" class="nav-link">+ Upload</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main class="container">
+        {% block content %}{% endblock %}
+    </main>
+
+    <footer class="main-footer">
+        <div class="container">
+            <p>auralis 2024 - Fresh AI music, 2006 vibes.</p>
+            <p style="margin-top: 10px; font-size: 12px;">
+                <a href="#" style="color: var(--text-light);">Creative Commons</a> • 
+                <a href="#" style="color: var(--text-light);">Privacy</a> • 
+                <a href="#" style="color: var(--text-light);">Terms</a>
+            </p>
+        </div>
+    </footer>
+
+    <script src="{{ url_for('static', filename='js/player.js') }}"></script>
+</body>
+</html>
