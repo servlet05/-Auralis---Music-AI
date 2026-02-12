@@ -1,0 +1,34 @@
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+env/
+venv/
+.env
+.venv
+
+# Flask
+instance/
+.webassets-cache
+.env
+.flaskenv
+
+# Database
+*.db
+*.sqlite
+*.sqlite3
+
+# Uploads
+auralis/static/uploads/*
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# OS
+.DS_Store
+Thumbs.db
