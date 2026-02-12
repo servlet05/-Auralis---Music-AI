@@ -30,7 +30,7 @@ git clone https://github.com/servlet05/auralis.git
 cd auralis
 ```
 ```
-python -m venv venv
+python3 -m venv venv
 source venv/bin/activate  # Linux/Mac
 # o
 venv\Scripts\activate  # Windows
@@ -49,5 +49,5 @@ flask shell
 >>> exit()
 ```
 ```
-python run.py
+python3 run.py
 ```
